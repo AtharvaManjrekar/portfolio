@@ -1,17 +1,52 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Technologies from "./components/Technologies";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <>
-    <h1>This is Atharva's Portfolio</h1>
-   </>
-  )
+    <>
+      <Navbar />
+
+      <main>
+        <section id="home" className="bg-white">
+          <Hero />
+        </section>
+
+        <section id="about" className="bg-gray-50">
+          <About />
+        </section>
+
+        <section id="skills" className="bg-white">
+          <Technologies />
+        </section>
+
+        <section id="experience" className="bg-gray-50">
+          <Experience />
+        </section>
+
+        <section id="projects" className="bg-white">
+          <Projects />
+        </section>
+
+        <section id="education" className="bg-gray-50">
+          <Education />
+        </section>
+
+        <section id="contact" className="bg-white">
+          <Contact />
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
